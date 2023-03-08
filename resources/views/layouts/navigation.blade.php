@@ -16,6 +16,11 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
+                        {{ __('Users') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -34,6 +39,19 @@
                     </x-slot>
 
                     <x-slot name="content">
+                        <x-dropdown-link :href="route('languageConverter','ar')">
+                            {{ __('Ar') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('languageConverter','en')">
+                            {{ __('En') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('languageConverter','es')">
+                            {{ __('Es') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('languageConverter','fr')">
+                            {{ __('Fr') }}
+                        </x-dropdown-link>
+
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
