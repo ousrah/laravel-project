@@ -36,6 +36,7 @@
             </main>
         </div>
         <!-- Scripts -->
+        @livewire('livewire-ui-modal')
         @livewireScripts
         @powerGridScripts
 
